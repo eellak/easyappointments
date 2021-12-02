@@ -51,6 +51,13 @@ The application is designed to be flexible enough so that it can handle any ente
 * Translated user interface.
 * User community support. 
 
+
+### GFOSS Adjustments
+
+* We added a new css file to change the appearence of the interface. 
+* We added the capability to automatically generate a jitsi link if the location field at the service form is empty, stored in the database and send it by email to the user.
+
+
 ## Setup
 
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) and [Composer](https://getcomposer.org) installed on your computer. From your command line:
@@ -91,6 +98,16 @@ If you have problems installing or configuring the application visit the
 [official support group](https://groups.google.com/forum/#!forum/easy-appointments).
 You can also report problems on the [issues page](https://github.com/alextselegidis/easyappointments/issues)
 and help the development progress.
+
+
+### GFOSS adjastments
+
+In order Easy!Appointments work with your jitsi server you must: 
+
+* in our config-sample.php you must set the JITSI_URL variable to your server's jitsi URL, ex.: https://jitsi.example.com/
+
+
+
 
 ## License 
 
