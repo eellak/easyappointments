@@ -100,9 +100,9 @@ You can also report problems on the [issues page](https://github.com/alextselegi
 and help the development progress.
 
 
-### GFOSS adjastments
+### GFOSS adjustments
 
-In order Easy!Appointments work with your jitsi server you must: 
+In order Easy!Appointments to work with your jitsi server you must: 
 
 * in our config-sample.php you must set the JITSI_URL variable to your server's jitsi URL, ex.: https://jitsi.example.com/
 
