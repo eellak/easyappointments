@@ -36,6 +36,15 @@
                 <td class="label" style="padding: 3px;font-weight: bold;"><?= lang('timezone') ?></td>
                 <td style="padding: 3px;"><?= $appointment_timezone ?></td>
             </tr>
+
+			<?php $app_loc = $appointment_location ;  ?>
+
+            <tr>
+                <td class="label" style="padding: 3px;font-weight: bold;"><?= lang('location'); ?></td>
+                <td style="padding: 3px;"><a href="<?= $app_loc ?>"><?= $app_loc ?></a></td>
+            </tr>
+
+
         </table>
 
         <h2><?= lang('customer_details_title') ?></h2>

@@ -145,6 +145,7 @@ class Email {
             'appointment_end_date' => $appointment_end->format($date_format . ' ' . $time_format),
             'appointment_timezone' => $timezones[empty($timezone) ? $provider['timezone'] : $timezone],
             'appointment_link' => $appointment_link_address->get(),
+            'appointment_location' => $appointment["location"],
             'company_link' => $settings['company_link'],
             'company_name' => $settings['company_name'],
             'customer_name' => $customer['first_name'] . ' ' . $customer['last_name'],

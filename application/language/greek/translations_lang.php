@@ -330,3 +330,10 @@ $lang['default'] = 'Προεπιλογμένο';
 $lang['table'] = 'Πίνακας';
 $lang['date'] = 'Ημερομηνία';
 // End
+
+//k/ 
+
+
+$lang['display_landing_page'] = 'Προβολή εισαγωγικού κειμένου';
+$lang['landing_page_content'] = 'Περιεχόμενο εισαγωγικού κειμένου';
+$lang['landing_page'] = 'Εισαγωγικό Περιεχόμενο';

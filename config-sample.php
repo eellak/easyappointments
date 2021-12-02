@@ -52,6 +52,13 @@ class Config {
     const GOOGLE_CLIENT_ID      = '';
     const GOOGLE_CLIENT_SECRET  = '';
     const GOOGLE_API_KEY        = '';
+    
+    // ------------------------------------------------------------------------
+    // JITSI URL
+    // ------------------------------------------------------------------------
+    
+    const JITSI_URL    = "YOUR JITSI SERVER URL" ;
+
 }
 
 /* End of file config.php */

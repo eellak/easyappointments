@@ -53,6 +53,15 @@
                 <a class="nav-link" href="#current-user" data-toggle="tab"><?= lang('current_user') ?></a>
             </li>
         <?php endif ?>
+
+
+        <?php if ($privileges[PRIV_SYSTEM_SETTINGS]['view'] == TRUE) { //k/ ?>
+            <li class="nav-item">
+                <a class="nav-link" href="#landing-page" data-toggle="tab"><?php echo lang('landing_page'); //k/ ?></a>
+            </li>
+        <?php }  //k/ ?>
+
+
         <li class="nav-item">
             <a class="nav-link" href="#about-app" data-toggle="tab"><?= lang('about_app') ?></a>
         </li>
@@ -494,6 +503,55 @@
                 </div>
             </form>
         </div>
+
+
+
+
+        <!-- LANDING PAGE TAB //k/ -->
+
+        <?php $hidden = ($privileges[PRIV_SYSTEM_SETTINGS]['view'] == TRUE) ? '' : 'd-none' ?>
+        <div class="tab-pane <?= $hidden ?>" id="landing-page">
+            <form>
+                <fieldset>
+                    <legend class="border-bottom mb-4">
+                        <?= lang('landing_page') ?>
+                        <?php if ($privileges[PRIV_SYSTEM_SETTINGS]['edit'] == TRUE): ?>
+                            <button type="button" class="save-settings btn btn-primary btn-sm mb-2"
+                                    data-tippy-content="<?= lang('save') ?>">
+                                <i class="fas fa-check-square mr-2"></i>
+                                <?= lang('save') ?>
+                            </button>
+                        <?php endif ?>
+                    </legend>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9">
+
+                            <h4><?= lang('landing_page') ?></h4>
+
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="display-landing-page">
+                                        <label class="custom-control-label" for="display-landing-page">
+                                            <?= lang('display_landing_page') ?>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label><?= lang('landing_page_content') ?></label>
+                                <textarea id="landing-page-content" cols="30" rows="10" class="form-group"></textarea>
+                            </div>
+                         </div>   
+                     </div>      
+                </fieldset>
+            </form>
+        </div>
+
+
+
 
         <!-- ABOUT TAB -->
 

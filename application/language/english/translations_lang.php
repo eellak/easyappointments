@@ -330,3 +330,11 @@ $lang['default'] = 'Default';
 $lang['table'] = 'Table';
 $lang['date'] = 'Date';
 // End
+
+//k/ 
+
+
+$lang['display_landing_page'] = 'Display Landing Page';
+$lang['landing_page_content'] = 'Landing Page Content';
+$lang['landing_page'] = 'Landing Page';
+

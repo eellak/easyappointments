@@ -75,6 +75,12 @@ class Appointments extends EA_Controller {
             $display_any_provider = $this->settings_model->get_setting('display_any_provider');
             $timezones = $this->timezones->to_array();
 
+            //k/ 
+            $display_landing_page = $this->settings_model->get_setting('display_landing_page');
+            $landing_page_content = $this->settings_model->get_setting('landing_page_content');
+            
+
+
             // Remove the data that are not needed inside the $available_providers array.
             foreach ($available_providers as $index => $provider)
             {
@@ -174,6 +180,10 @@ class Appointments extends EA_Controller {
                 'privacy_policy_content' => $privacy_policy_content,
                 'timezones' => $timezones,
                 'display_any_provider' => $display_any_provider,
+                //k/
+                'display_landing_page' => $display_landing_page,
+                'landing_page_content' => $landing_page_content,
+                
             ];
         }
         catch (Exception $exception)
@@ -464,10 +474,13 @@ class Appointments extends EA_Controller {
                 $customer['id'] = $this->customers_model->find_record_id($customer);
             }
 
-            if (empty($appointment['location']) && ! empty($service['location']))
-            {
-                $appointment['location'] = $service['location'];
-            }
+            if (empty($appointment['location']))
+			{
+				if (! empty($service['location']))
+					$appointment['location'] = $service['location'];
+				else
+					$appointment['location'] =  uniqid(Config::JITSI_URL, true);
+			}
 
             // Save customer language (the language which is used to render the booking page).
             $customer['language'] = config('language');

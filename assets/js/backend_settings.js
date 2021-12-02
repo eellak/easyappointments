@@ -49,7 +49,9 @@ window.BackendSettings = window.BackendSettings || {};
     exports.initialize = function (defaultEventHandlers) {
         defaultEventHandlers = defaultEventHandlers || true;
 
-        $('#cookie-notice-content, #terms-and-conditions-content, #privacy-policy-content').trumbowyg();
+        $('#cookie-notice-content, #terms-and-conditions-content, #privacy-policy-content, #landing-page-content').trumbowyg();
+
+//k/
 
         // Apply setting values from database.
         var workingPlan = {};
@@ -101,6 +103,20 @@ window.BackendSettings = window.BackendSettings || {};
             if (setting.name === 'privacy_policy_content') {
                 $('#privacy-policy-content').trumbowyg('html', setting.value);
             }
+
+
+//k/
+
+            if (setting.name === 'display_landing_page') {
+                $('#display-landing-page').prop('checked', Boolean(Number(setting.value)));
+            }
+            if (setting.name === 'landing_page_content') {
+                $('#landing-page-content').trumbowyg('html', setting.value);
+            }
+
+
+
+
         });
 
         exports.wp = new WorkingPlan();

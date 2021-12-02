@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/ext/cookieconsent/cookieconsent.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/css/frontend.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/css/general.css') ?>">
+    
+    <link rel="stylesheet" type="text/css" href="<?= asset_url('assets/css/gfoss-theme.css') ?>">
+    
 
     <link rel="icon" type="image/x-icon" href="<?= asset_url('assets/img/favicon.ico') ?>">
     <link rel="icon" sizes="192x192" href="<?= asset_url('assets/img/logo.png') ?>">
@@ -96,6 +99,22 @@
             <!-- SELECT SERVICE AND PROVIDER -->
 
             <div id="wizard-frame-1" class="wizard-frame">
+
+
+
+
+
+
+            <!-- //k/ LANDING PAGE TEXT -->
+
+<?php if ($display_landing_page === '1') { ?>
+                    <div class="landing_page">
+                       <?php echo $landing_page_content ; ?>
+                  </div>
+<?php } ?>
+
+
+
                 <div class="frame-container">
                     <h2 class="frame-title"><?= lang('service_and_provider') ?></h2>
 

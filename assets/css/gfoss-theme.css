@@ -1,0 +1,81 @@
+
+body { font-family: Roboto; font-size: 1rem; }
+h2   { font-size: 1.5rem; }
+h3   { font-size: 1.125rem; }
+
+
+@media (min-width:600px) {
+  body { font-size: 1.1875rem; }
+  h2   { font-size: 2.25rem; }
+  h3   { font-size: 1.5rem; }
+}
+@media (min-width:960px) {
+  body { font-size: 1.1875rem; }
+  h2   { font-size: 2.25rem; }
+  h3   { font-size: 1.5rem; }
+ }
+@media (min-width:1280px) {
+  body { font-size: 1.1875rem; }
+  h2   { font-size: 2.25rem; }
+  h3   { font-size: 1.5rem; }
+}
+
+a { color: #046ec5; }
+a:hover { color: #003476; }
+a:visited { color: #4c2c92; }
+a:active { color: #212529; }
+
+a.backend-link, a.backend-link:visited { color: #fff; }
+
+
+
+#book-appointment-wizard .frame-container .frame-title { font-weight: bolder; color: #212529 }
+
+
+#book-appointment-wizard 
+#header { background: #003476; min-height: 100px; border-bottom: 8px solid #046ec5; }
+#book-appointment-wizard .book-step { background: #046ec5; }
+#book-appointment-wizard .book-step strong { color: #fff; }
+#book-appointment-wizard .active-step { background: #fff; }
+#book-appointment-wizard .active-step strong { color: #046ec5; }
+
+#book-appointment-wizard #company-name { 
+background: url('https://ellak.gr/wp-content/uploads/2016/07/logow.png') no-repeat; font-size: 0px; width: 200px; height: 40px; background-size: contain; }
+
+#book-appointment-wizard #button-next-1, #book-appointment-wizard #button-next-2, 
+    #book-appointment-wizard #button-next-3  { background: #616161; }
+
+#book-appointment-wizard #book-appointment-submit { background: #00703c; border-color: #00703c; }
+
+/*  Calendar */
+body .ui-datepicker .ui-widget-header, body .ui-datepicker th, html body .ui-datepicker td a.ui-state-active,
+#book-appointment-wizard #available-hours .selected-hour
+    { background: #046ec5!important; }
+
+body .ui-widget.ui-widget-content, body .ui-datepicker td a, body .ui-datepicker td span { color: #046ec5!important; }
+#book-appointment-wizard #available-hours .selected-hour, body .ui-widget.ui-widget-content { border-color: #046ec5; }
+
+.has-error .form-control { border-color: #ca2e2e; }
+.has-error .control-label, .has-error label  { color: #ca2e2e; }
+
+/*  END OF Calendar */
+
+/* Hours */
+
+#available-hours button:hover { background-color: #616161; border-color: #616161; }
+
+/*  END OF Hours  */
+
+/* FOOTER */
+
+#book-appointment-wizard  #frame-footer {  width: 100%; padding: 32px 20px; background: #eeeeee; 
+                border-top: 4px solid #046ec5;  }
+
+/* END OF FOOTER */
+
+
+/* LANDING PAGE */
+
+.landing_page { padding: 15px 0; text-align: left; }
+.landing_page h2 { text-align: center; font-weight: bolder; color: #212529; }
+/* END OF LANDING PAGE */
