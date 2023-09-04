@@ -54,8 +54,15 @@ The application is designed to be flexible enough so that it can handle any ente
 
 ### GFOSS Adjustments
 
+We made minimal changes in EASY!APPOINTMENTS source code.
+
 * We added a new css file to change the appearence of the interface. 
 * We added the capability to automatically generate a jitsi link if the location field at the service form is empty, stored in the database and send it by email to the user.
+* If the Administrator doesn’t set a physical location for a service platform creates a unique Jitsi link using the appointment’s hash
+* We used the native location field to store and show the Jitsi link
+* We added the location field in the email the user receives
+* In Administration Settings we added fields to add / change text in homepage
+
 
 
 ## Setup
@@ -64,7 +71,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/alextselegidis/easyappointments.git
+$ git clone git clone https://github.com/eellak/easyappointments.git
 
 # Go into the repository
 $ cd easyappointments
@@ -102,11 +109,25 @@ and help the development progress.
 
 ### GFOSS adjustments
 
-In order Easy!Appointments to work with your jitsi server you must: 
+In order Easy!Appointments to work with your jitsi server we changed: 
 
 * in our config-sample.php you must set the JITSI_URL variable to your server's jitsi URL, ex.: https://jitsi.example.com/
+* Added two fields in the database:
+INSERT INTO `bookingjitsiwp`.`ea_settings` (`name`, `value`) VALUES ('display_landing_page', '1');
+INSERT INTO `bookingjitsiwp`.`ea_settings` (`name`, `value`) VALUES ('landing_page_content', 'I am the Landing Page Content ');
+* In file engine/Notifications/Email.php we added appointment location with the jitsi link.
+* In file application/views/emails/appointment_details.php we show the link with the location data.
+* Changed the following javascript files to show an html editor and receive the values:
+/assets/js/backend_settings.min.js
+/assets/js/backend_settings_system.min.js
+* Added php code in the folloing files to show text:
+/application/views/appointments/book.php
+/application/controllers/Appointments.php
+
+For more details theck [git comparison](https://github.com/eellak/easyappointments/compare/master...eellak:easyappointments:gfoss-adjusted#diff-39f98e2c8fe6c21881031e3f11a2a4931857a8a624a69d3895ea2f08dc0e996bL38) .
 
 
+**To access our working demo contact us at info@eellak.gr.**
 
 
 ## License 
